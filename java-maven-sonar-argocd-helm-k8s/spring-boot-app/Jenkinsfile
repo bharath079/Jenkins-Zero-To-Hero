@@ -57,6 +57,7 @@ pipeline {
                 sh '''
                     apk add --no-cache git
                     cd $WORKSPACE
+                    git config --global --add safe.directory $WORKSPACE
                     pwd
                     ls -la
                     git status || true
